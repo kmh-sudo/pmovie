@@ -1,26 +1,56 @@
+
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-marker: var(--font-permanent-marker), cursive;
+
+  --color-defjam-bg: #0F0C08;
+  --color-defjam-card: #1C1611;
+  --color-defjam-gold: #D4AF37;
+  --color-defjam-red: #8B0000;
+  --color-defjam-red-bright: #FF1E1E;
+  --color-defjam-text: #F5F5DC;
+  --color-defjam-muted: #A39E93;
+  
+  --font-display: "Bungee", "Rye", sans-serif;
+  --font-gaming: "Teko", "Anton", sans-serif;
+  --font-sans: "Roboto", "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+      background-image: url("/bg.png"); 
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: var(--color-defjam-muted);
+      font-family: var(--font-sans);
   }
+
+  .defjam-text {
+      color: var(--color-defjam-text);
+      font-family: var(--font-sans);
+  }
+
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.defjam-border {
+  border: 2px solid var(--color-defjam-gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.defjam-button {
+  background-color: var(--color-defjam-red);
+  color: #FFFFFF;
+  font-family: var(--font-gaming);
+  letter-spacing: 0.05em;
+  border: 2px solid var(--color-defjam-gold);
+  transition: all 0.2s ease-in-out;
+}
+
+.defjam-button:hover {
+  background-color: var(--color-defjam-red-bright);
+  box-shadow: 0 0 15px rgba(255, 30, 30, 0.4);
 }
