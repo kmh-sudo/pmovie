@@ -4,7 +4,6 @@ import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from "../public/hoodframe.png";
-import { BetweenHorizontalEnd } from "lucide-react";
 import NavBar from "@/components/navBar";
 import SideBar from "@/components/sideBar";
 
