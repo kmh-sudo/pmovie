@@ -1,4 +1,5 @@
 import { MoveLeft } from 'lucide-react';
+import { CircleAlert } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -6,6 +7,12 @@ export default function Page() {
         <div className="flex gap-2 items-center mb-10 items-center justify-start"><MoveLeft/> <h2 className="text-defjam-bg text-2xl font-bold font-marker">Add Movie</h2></div>
       <div>
         <form action="" className="space-y-5 max-w-[80%] mx-auto">
+            <div className="flex flex-col gap-3">
+                <div className="flex gap-2 items-center justify-end"><CircleAlert className="text-defjam-red w-5 h-5"/><label className="text-sm text-defjam-red">Search name and copy movie ID or code</label></div>
+                
+                <input type="text" placeholder="Enter movie name" className=" border p-3"/>
+                
+            </div>
             <div className="flex flex-col gap-3">
                 <label className="text">Movie Name</label>
                 <input type="text" placeholder="Enter movie name" className=" border p-3"/>
