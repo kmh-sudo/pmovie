@@ -1,8 +1,9 @@
+import { MoveLeft } from 'lucide-react';
 
 export default function Page() {
   return (
     <div className="text-black p-20 ">
-        <div className="flex gap-2 items-center mb-10">back <h2 className="text-defjam-bg text-2xl font-bold  font-marker">Add Movie</h2></div>
+        <div className="flex gap-2 items-center mb-10 items-center justify-start"><MoveLeft/> <h2 className="text-defjam-bg text-2xl font-bold font-marker">Add Movie</h2></div>
       <div>
         <form action="" className="space-y-5 max-w-[80%] mx-auto">
             <div className="flex flex-col gap-3">

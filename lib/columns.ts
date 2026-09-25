@@ -1,26 +1,30 @@
 'use client';
-
+type MovieRow = {
+    name: string;
+    tmdbId: string;
+    url: string;
+};
  export const columns = [
     {
         name: 'No',
-        selector: (row: any, index: number) => index + 1,
+        selector: (row: MovieRow, index: number) => index + 1,
         sortable: true,
         width: '50px',
     },
     {
         name: 'Name',
-        selector: (row: any) => row.name,
+        selector: (row: MovieRow) => row.name,
         sortable: true,
 
     },
     {
         name: 'Tmdb-ID',
-        selector: (row: any) => row.tmdbId,
+        selector: (row: MovieRow) => row.tmdbId,
         sortable: true,
     },
     {
         name: 'Movie link',
-        selector: (row: any) => row.url,
+        selector: (row: MovieRow) => row.url,
         sortable: true,
     }
 
