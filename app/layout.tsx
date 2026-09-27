@@ -4,8 +4,8 @@ import { Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logo from "../public/hoodframe.png";
-import NavBar from "@/components/navBar";
-import SideBar from "@/components/sideBar";
+import NavBar from "@/components/ui/navBar";
+import SideBar from "@/components/ui/sideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,13 +64,11 @@ export default function RootLayout({
 
             {/* Main */}
             <div className="grid md:grid-cols-[auto_1fr]">
-            <aside className="hidden md:block ">
-              <SideBar />
-            </aside>
+              <aside className="hidden md:block ">
+                <SideBar />
+              </aside>
 
-            <main className="min-w-0 pb-24 sm:pb-0 lg:pb-0 ">
-              {children}
-            </main>
+              <main className="min-w-0 pb-24 sm:pb-0 lg:pb-0 ">{children}</main>
             </div>
           </div>
 
