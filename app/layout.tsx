@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "../public/hoodframe.png";
 import NavBar from "@/components/ui/navBar";
 import SideBar from "@/components/ui/sideBar";
+import Provider from "./providers"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${permanentMarker.variable} ${geistMono.variable} antialiased`}
     >
       <body className="min-h-dvh bg-defjam-bg text-defjam-text ">
-        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 relative">
+        <Provider>
+           <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 relative">
           <div className=" grid grid-cols-1 grid-rows-[auto_1fr] min-h-dvh gap-y-6">
             <div className="col-span-full ">
               {" "}
@@ -78,6 +80,8 @@ export default function RootLayout({
             <NavBar />
           </div>
         </div>
+        </Provider>
+       
       </body>
     </html>
   );

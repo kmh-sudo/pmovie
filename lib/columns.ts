@@ -1,30 +1,26 @@
 'use client';
-type MovieRow = {
-    name: string;
-    tmdbId: string;
-    url: string;
-};
+import { addMovie } from "@/types/definitions";
  export const columns = [
     {
         name: 'No',
-        selector: (row: MovieRow, index: number) => index + 1,
+        selector: (row: addMovie, index: number) => index + 1,
         sortable: true,
         width: '50px',
     },
     {
         name: 'Name',
-        selector: (row: MovieRow) => row.name,
+        selector: (row: addMovie) => row.name,
         sortable: true,
 
     },
     {
         name: 'Tmdb-ID',
-        selector: (row: MovieRow) => row.tmdbId,
+        selector: (row: addMovie) => row.tmdbId,
         sortable: true,
     },
     {
-        name: 'Movie link',
-        selector: (row: MovieRow) => row.url,
+        name: 'Movie Id',
+        selector: (row: addMovie) => row.fileId,
         sortable: true,
     }
 
