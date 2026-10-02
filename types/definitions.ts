@@ -6,3 +6,9 @@ export type searchMovie = {
     title: string;
     release_date: string;
 }
+
+export type addMovie = {
+    name: string;
+    tmdbId: string;
+    fileId: string;
+}

@@ -37,17 +37,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${permanentMarker.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${permanentMarker.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="min-h-dvh bg-defjam-bg text-defjam-text antialiased">
-        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+      <body className="min-h-dvh bg-defjam-bg text-defjam-text ">
+        <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 relative">
           <div className=" grid grid-cols-1 grid-rows-[auto_1fr] min-h-dvh gap-y-6">
             <div className="col-span-full ">
               {" "}
-              {/* Navbar */}
               <nav className="flex shrink-0 items-center justify-between py-4">
                 <div className="flex items-center">
                   <Image
@@ -64,7 +65,8 @@ export default function RootLayout({
 
             {/* Main */}
             <div className="grid md:grid-cols-[auto_1fr]">
-              <aside className="hidden md:block ">
+
+              <aside className="hidden sm:block">
                 <SideBar />
               </aside>
 
@@ -72,7 +74,7 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="fixed inset-x-0 bottom-0 z-10 sm:hidden">
+          <div className="fixed inset-x-0 bottom-0 z-10 sm:hidden absolute z-10">
             <NavBar />
           </div>
         </div>

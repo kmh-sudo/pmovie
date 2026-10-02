@@ -43,9 +43,9 @@ export default function AdminMovieSearch({onSearchMovie}: AdminMovieSearchProps)
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#8B0000] px-5 py-3 rounded-lg text-white font-bold hover:bg-red-700 transition disabled:opacity-50"
+          className="bg-[#8B0000] px-5 py-3 rounded-lg text-white font-bold hover:bg-red-700 transition disabled:opacity-50 text-sm"
         >
-          {loading ? 'Searching...' : 'Confirm'}
+          {loading ? 'Searching...' : 'OK'}
         </button>
       </form>
 
@@ -54,7 +54,7 @@ export default function AdminMovieSearch({onSearchMovie}: AdminMovieSearchProps)
 
       {/* Search Results List */}
       {!loading && searched && (
-        <div className="mt-4 space-y-2 max-h-60 overflow-y-auto">
+        <div className="mt-4 space-y-2 max-h-30 overflow-y-auto">
           {movies.length > 0 ? (
             movies.map((movie) => (
               <div
