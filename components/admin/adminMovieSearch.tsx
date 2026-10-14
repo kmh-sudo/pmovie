@@ -2,17 +2,17 @@
  
 import { useState } from 'react';
 import {SearchMoviebyName} from '@/lib/tmdb';
-import { searchMovie } from '@/types/definitions';
+import { SearchMovie } from '@/types/definitions';
 
 interface AdminMovieSearchProps {
-    onSearchMovie: (movie: searchMovie) => void;
+    onSearchMovie: (movie: SearchMovie) => void;
     // Add any props that the component needs here
 }
 
 export default function AdminMovieSearch({onSearchMovie}: AdminMovieSearchProps) 
 {
     const [movieName, setMovieName] = useState('');
-    const [movies, setMovies] = useState<searchMovie[]>([]);
+    const [movies, setMovies] = useState<SearchMovie[]>([]);
     const [loading, setLoading] = useState(false);
     const [searched, setSearched] = useState(false);
 
@@ -27,7 +27,7 @@ export default function AdminMovieSearch({onSearchMovie}: AdminMovieSearchProps)
         onSearchMovie(movie);
     }
 
-    console.log(movies.map((m) => console.log(m.id)), "movies")
+    console.log(movies.map((m) => console.log(m.id)), "movies id")
     
     return (
         <div className="bg-[#1C1611] p-5 rounded-xl border border-[#D4AF37]/30 text-[#F5F5DC]">
@@ -38,7 +38,7 @@ export default function AdminMovieSearch({onSearchMovie}: AdminMovieSearchProps)
           value={movieName}
           onChange={(e) => setMovieName(e.target.value)}
           placeholder="Enter movie name (e.g. Fight Club)..."
-          className="flex-1 bg-[#0F0C08] border border-[#D4AF37]/30 p-3 rounded-lg text-white focus:outline-none focus:border-[#D4AF37]"
+          className="flex-1 bg-[#1C1611] border border-[#D4AF37]/30 p-3 rounded-lg text-white focus:outline-none focus:border-[#D4AF37]"
         />
         <button
           type="submit"

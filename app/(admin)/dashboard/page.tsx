@@ -6,19 +6,19 @@ export default function Page() {
     <div className="max-w-[95%] mx-auto p-3 py-5">
       <div className="flex justify-between items-center">
         {" "}
-        <h2 className="text-defjam-bg text-2xl font-bold py-4 font-marker text-center">
+        <h2 className="text-defjam-bg text-2xl font-bold py-4 font-marker text-defjam-muted text-center">
           {" "}
           Movies
         </h2>
         <Link href="/dashboard/create">
           {" "}
-          <div className="border p-3 text-white bg-defjam-bg rounded-md cursor-pointer hover:bg-defjam-hover transition-all duration-300 ease-in-out">
+          <div className="border p-3 text-white rounded-md cursor-pointer hover:bg-defjam-hover transition-all duration-300 ease-in-out">
             <Plus className="text-3xl " />
           </div>
         </Link>
       </div>
 
-      <div className="">
+      <div className="mt-10">
         <MovieTable />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { getMovie, getMovieById, addMovieToDB, deleteMovieFromDB, updateMovieInDB } from "@/services/service";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { addMovie } from "@/types/definitions";
+import { AddMovie } from "@/types/definitions";
 
 // Query Keys
 export const movieKeys = {
@@ -45,7 +45,7 @@ export const useDeleteMovie = () => {
 export const useUpdateMovie = (id: string) => {
   const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (movie: addMovie) => updateMovieInDB(id, movie),
+        mutationFn: (movie: AddMovie) => updateMovieInDB(id, movie),
         onSuccess: () => {
         queryClient.invalidateQueries({ queryKey: movieKeys.detail(Number(id)) });
         queryClient.invalidateQueries({ queryKey: movieKeys.all });

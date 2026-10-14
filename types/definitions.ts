@@ -1,4 +1,4 @@
-export type searchMovie = {
+export type SearchMovie = {
     name: string;
     tmdbId: string;
     url: string;
@@ -7,7 +7,14 @@ export type searchMovie = {
     release_date: string;
 }
 
-export type addMovie = {
+export type AddMovie = {
+    name: string;
+    tmdbId: string;
+    fileId: string;
+}
+
+export type UpdateMovie = {
+    id: string;
     name: string;
     tmdbId: string;
     fileId: string;
